@@ -3,14 +3,25 @@
     <body>
         <h1> Bienvenidos !</h1>
         <script>
-            console.log("Hola!")
+        const nombres = ['Adriana', 'Benito', 'Claudia', 'Daniel', 'Estefania', 'Fernando','Gabriela','Hugo']
 
-            let nombres = ['Adriana', 'Benito', 'Claudia', 'Daniel', 'Estefania', 'Fernando','Gabriela','Hugo']
-            nombres.forEach(function(nombre) {
-                console.log(nombre)
-            }
-            )
+	const nombres_obj = a_objetos(nombres)
 
+	console.log(JSON.stringify(nombres_obj))
+
+	function a_objetos(nombres){
+
+	  const respuesta = []
+	  nombres.forEach(function(nombre) {
+    
+ 	   const obj = {
+  	    nombre : nombre,
+  	    longitud : nombre.length
+ 	   }
+  	  respuesta.push(obj)
+ 	 })
+	  return respuesta
+	}
         </script>
     </body>
 </html>
